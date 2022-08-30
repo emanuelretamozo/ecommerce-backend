@@ -14,7 +14,8 @@ const schema = new mongoose.Schema({
         required: true,
     },
     category: {
-        type: String,
+        type: mongoose.Schema.Types.ObjectID,
+        ref: "ProductCategory",
         required: true,
         default: "general"
     },
@@ -29,7 +30,7 @@ const schema = new mongoose.Schema({
     imagery: {
         name: {
             type: String,
-            required: true
+            required: false
         },
         description: {
             type: String,

@@ -1,24 +1,25 @@
 import mongoose from "mongoose";
 
 const schema = new mongoose.Schema({
-    client: {
-        type: String,
+    name: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
         required: true,
     },
     shoppingCart: {
-        products: {
-            type: Array,
-            product: {
-                type: String,
-                required: true
-            },
-            amount: {
-                type: Number,
-                required: true
-            },
-            unique: true
-        }
-    }
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "ShoppingCart",
+        required: true
+    },
+    date: {
+        type: Date(),
+        required: true
+    },
+    coupon: {
+        type: String,
+        required: false
+    },
+    
 });
 
 export default mongoose.model("Sales", schema);

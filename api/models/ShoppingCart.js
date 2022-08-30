@@ -7,21 +7,21 @@ const schema = new moongose.Schema({
         default: 0
     },
     paymentDate: {
-        type: new Date(),
+        type: Date(),
         required: true,
         default: null
     },
-    products: {
-        type: Array,
+    products: [{
         product: {
-            type: String,
+            type: moongose.Schema.Types.ObjectId,
+            ref: "Product",
             required: true
         },
         amount: {
             type: Number,
             required: true
         }
-    }
+    }]
 });
 
 export default moongose.model("ShoppingCart", schema);
