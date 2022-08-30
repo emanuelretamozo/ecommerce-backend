@@ -35,8 +35,7 @@ const schema = new mongoose.Schema({
             type: String,
             required: false
         },
-        img: {
-            data: Buffer,
+       url: {
             type: String,
             required: true
         }

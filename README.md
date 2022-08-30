@@ -14,7 +14,7 @@ The ecommerce backend project for the advance backend module of the master in Co
   - Administrador
   - Cliente
   - Vendedor
-- Los clientes se registran llenando el formulario com los siguientes datos:
+- Los clientes se registran llenando el formulario con los siguientes datos:
 ​
   - Nombre
   - Apellido

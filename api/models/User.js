@@ -62,12 +62,17 @@ const schema = new mongoose.Schema({
     type: String,
     required: true
   },
-  role: {
+  contactReferences: {
     type: String,
-    enum: ['Manager', 'Client', 'Seller'],
-    default: 'Manager',
-    required: true,
+    required: false,
+    default: " "
   }
+  // role: {
+  //   type: String,
+  //   enum: ['Manager', 'Client', 'Seller'],
+  //   default: 'Manager',
+  //   required: true,
+  // }
 });
 
 export default mongoose.model("User", schema);
