@@ -1,4 +1,10 @@
 import mongoose from "mongoose";
+import { v2 as cloudinary } from 'cloudinary'
+
+cloudinary.config({ 
+    CLOUDINARY_URL: process.env.CLOUDINARY_URL,
+    secure: true
+  });
 
 const schema = new mongoose.Schema({
     name: {
@@ -36,7 +42,7 @@ const schema = new mongoose.Schema({
             type: String,
             required: false
         },
-       url: {
+        CLOUDINARY_URL: {
             type: String,
             required: true
         }
