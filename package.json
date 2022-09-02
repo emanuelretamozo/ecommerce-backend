@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "backend solo project",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/emanuelretamozo/ecommerce-backend#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.0",
     "cloudinary": "^1.31.0",
     "dotenv": "^16.0.1",
@@ -25,6 +28,7 @@
     "faker": "^6.6.6",
     "joi": "^17.6.0",
     "joi-password": "^4.0.0",
+    "jwt-simple": "^0.5.6",
     "mongoose": "^6.5.4",
     "mongoose-seeder": "^1.2.1",
     "multer": "^1.4.5-lts.1"

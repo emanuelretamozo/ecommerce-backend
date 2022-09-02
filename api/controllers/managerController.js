@@ -1,4 +1,8 @@
 import User from '../models/User.js';
+import mongoose from 'mongoose';
+import seeder from 'mongoose-seeder';
+
+const db = mongoose.connection;
 
 const createManager = async (req, res) => {
     try {

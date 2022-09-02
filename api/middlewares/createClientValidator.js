@@ -1,10 +1,9 @@
 import joi from "joi";
-const joi = require('joi');
-const { joiPasswordExtendCore } = require('joi-password');
-const joiPassword = joi.extend(joiPasswordExtendCore);
+import  { joiPasswordExtendCore } from 'joi-password';
+const joiPassword = joi.extend( joiPasswordExtendCore );
+
 
 let users = ['Manager', 'Client', 'Seller'];
-
 const createClientSchema = joi.object({
     name: joi.string().required(),
     lastName: joi.string().required(),
